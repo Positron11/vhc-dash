@@ -39,12 +39,9 @@
 	counter-reset: navlink -1;
 }
 
-/* navigation link auto-numbering */
-#Navigation .link::before {
-	margin-right     : 1ch;
-	content          : counter(navlink, decimal-leading-zero)".";
-	font-size        : 0.9em;
-	counter-increment: navlink;
+#Navigation>.authLinks {
+	border-left: 2px solid var(--light-gray);
+	padding-left: var(--cmp-spacing);
 }
 
 /* PAGE CONTENT ============================================================= */
@@ -72,6 +69,6 @@
 }
 
 #KCDH {
-	border-left: 1px solid var(--white);
+	border-left : 1px solid var(--white);
 	padding-left: 1.5em;
 }

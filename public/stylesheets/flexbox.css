@@ -58,7 +58,8 @@
 	align-items: flex-end;
 }
 
-.Flexbox.mVertCenter {
+.Flexbox.mVertCenter,
+.Flexbox.mCol.mHorzCenter {
 	align-items: center;
 }
 

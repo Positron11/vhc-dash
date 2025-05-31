@@ -70,18 +70,27 @@ html(lang="en")
 						| #[button(onclick="zoom('in');", title=`Zoom in\nShortcut: [ctrl+-]`).mTiny +]
 
 		#Main.Flexbox.mCol.mStdSpacing
-			nav#Navigation.iAlignLeft.Box.Flexbox.mMinSpacing
+			nav#Navigation.iAlignLeft.Box.Flexbox.mCmpSpacing
 				.lLabel: b Navigation:
 
-				.link: a(href="/") Home
-				.link: a(href="/ranker") LLM Ranker
+				a(href="/").link.Flexbox.mCol.mMinSpacing.mHorzCenter
+					img(src="/icons/home.svg", alt="Home", width=50)
+					u Home
+				
+				a(href="/ranker").link.Flexbox.mCol.mMinSpacing.mHorzCenter
+					img(src="/icons/ranking.svg", alt="Ranker", width=50)
+					u LLM Ranker
 
 				unless user
-					.tGray |
-										
-					a.login(href="/login") Log In
-					a.login(href="/register") Register
-
+					.authLinks.Flexbox.mMinSpacing
+						img(src="/icons/user.svg", alt="User", width=80).iAlignBtm
+						
+						div
+							h2 User Account
+						
+							ul
+								li: a.login(href="/login") Log In
+								li: a.login(href="/register") Register
 
 			main#Content.Flexbox.mCol.mStdSpacing.iAlignLeft: block content
 
